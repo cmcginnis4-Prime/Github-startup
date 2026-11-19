@@ -3,81 +3,422 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI+Design Studio Command Center</title>
+  <title>Keeping AI On-Model: Directing a Comic — Command Center</title>
+  <meta name="description" content="Research dashboard for an inquiry into AI comic character consistency: when prompts, references, templates and character design each become necessary." />
   <link rel="stylesheet" href="style.css" />
 </head>
-<!--
-  THIS IS YOUR DASHBOARD. GitHub Pages serves this file.
-  Replace the placeholder text below with the real content from your
-  AI+Design Studio Command Center (Canvas: Project 2, Step 2).
-  KEEP OR TRIM: delete any <section> you did not build - all seven or a
-  subset is fine. Beginnings-level content is fine; this is the on-ramp,
-  not Project 5. Make it yours; do not leave it looking like a template.
--->
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <p class="eyebrow">AI + Design Studio &#183; Command Center</p>
-    <h1 id="project-title">Your Project Title</h1>
-    <p class="tagline">One-line summary of what you are investigating &#8212; and your name.</p>
+    <div class="header-inner">
+      <p class="eyebrow">DESN 374 &#183; AI + Design Studio</p>
+      <h1>Command Center</h1>
+      <p class="tagline">McGinnis Applied AI Final Project</p>
+    </div>
   </header>
 
-  <main class="container">
+  <nav class="site-nav" aria-label="Dashboard sections">
+    <ul>
+      <li><a href="#question">Question</a></li>
+      <li><a href="#ladder">Ladder</a></li>
+      <li><a href="#sources">Sources</a></li>
+      <li><a href="#references">References</a></li>
+      <li><a href="#log">Log</a></li>
+      <li><a href="#prompts">Prompts</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#links">Links</a></li>
+    </ul>
+  </nav>
 
-    <!-- Project Identity Card -->
-    <section aria-labelledby="identity-h">
-      <h2 id="identity-h">Project Identity Card</h2>
-      <p>Title, curiosity statement, short summary, audience / context, and possible final direction(s).</p>
+  <main id="main" class="container">
+
+    <!-- 1. Research question -->
+    <section id="question" aria-labelledby="question-h" class="hero">
+      <h2 id="question-h">The question</h2>
+      <p class="question">
+        How much direction does it take to keep an AI-illustrated comic character
+        on-model across panels &#8212; and at what point does each control method
+        become necessary?
+      </p>
+
+      <div class="blocks">
+        <div class="block">
+          <h3>Why it matters</h3>
+          <p>
+            For creators short on time or budget, AI can stand in for hand-illustration.
+            The catch is drift: a character who changes faces between panels breaks the
+            comic, and in silent sight gags the expression <em>is</em> the joke. Knowing
+            which control step a scene needs saves wasted generations and keeps the
+            creator in charge of the vision.
+          </p>
+        </div>
+        <div class="block">
+          <h3>Audience</h3>
+          <p>
+            Creators who can design a character but can&#8217;t hand-illustrate every
+            panel &#8212; indie comic makers and design students.
+          </p>
+        </div>
+        <div class="block">
+          <h3>Possible outcomes</h3>
+          <ol class="outcomes">
+            <li><strong>Consistency playbook</strong> &#8212; the control ladder, prompt templates and reference sheets, with notes on when each is needed.</li>
+            <li><strong>Short comic</strong> &#8212; a mostly-silent, music-driven strip; genre leaning modern / sci-fi / western, not medieval.</li>
+            <li><strong>Tool showdown</strong> &#8212; the same character and panels across models, scored on one rubric, failures kept as a blooper reel.</li>
+          </ol>
+        </div>
+      </div>
     </section>
 
-    <!-- Inquiry Brief -->
-    <section aria-labelledby="inquiry-h">
-      <h2 id="inquiry-h">Inquiry Brief</h2>
-      <p>Your research question, why it matters, what you need to learn, and 2&#8211;3 possible final outcomes.</p>
+    <!-- 2. Control ladder -->
+    <section id="ladder" aria-labelledby="ladder-h">
+      <h2 id="ladder-h">The control ladder</h2>
+      <p class="section-intro">
+        Each rung is a claim to test: does this step hold the character, or does it only
+        hide the drift? Rung order below Week 5 is still pending instructor feedback.
+      </p>
+
+      <ol class="ladder">
+        <li>
+          <div class="rung-head">
+            <h3>Text prompts</h3>
+            <span class="chip chip--next">Tested differently</span>
+          </div>
+          <p>
+            Where every attempt starts: cheap, fast, and where drift shows first.
+            The Week 5 run tested a repeat-prompt workflow rather than the four-panel
+            Drift Test itself.
+          </p>
+        </li>
+        <li>
+          <div class="rung-head">
+            <h3>Reference images</h3>
+            <span class="chip chip--todo">Next up</span>
+          </div>
+          <p>
+            A turnaround sheet gives the model more to hold onto. Rerun the same four
+            panels with the sheet attached, then compare against prompts alone.
+          </p>
+        </li>
+        <li>
+          <div class="rung-head">
+            <h3>Panel templates</h3>
+            <span class="chip chip--later">Planned &#183; Week 7</span>
+          </div>
+          <p>
+            Fix composition and framing so layout stops drifting between panels,
+            and measure what consistency the template buys on its own.
+          </p>
+        </li>
+        <li>
+          <div class="rung-head">
+            <h3>AI-friendly character design</h3>
+            <span class="chip chip--later">Planned &#183; Week 8</span>
+          </div>
+          <p>
+            Adjust the design to avoid whatever drifted most, rerun, and record what
+            AI keeps reliably versus what it loses.
+          </p>
+        </li>
+      </ol>
     </section>
 
-    <!-- Source Starter List -->
-    <section aria-labelledby="sources-h">
-      <h2 id="sources-h">Source Starter List</h2>
-      <ul>
-        <li>Source 1 &#8212; title, creator, link, type, why it matters</li>
-        <li>Source 2 &#8212; title, creator, link, type, why it matters</li>
-        <li>Source 3 &#8212; optional</li>
+    <!-- 3. Sources and notes -->
+    <section id="sources" aria-labelledby="sources-h">
+      <h2 id="sources-h">Sources and notes</h2>
+
+      <h3>Benchmarks and method</h3>
+      <ul class="source-list">
+        <li>
+          <span class="tag">Benchmark</span>
+          <a href="https://techstackups.com/comparisons/gemini-vs-openai-vs-flux-vs-runway-character-consistency-may-2026/">Which AI image generator has the best character consistency?</a>
+          <span class="byline">Tech Stackups, May 2026</span>
+          <p>FLUX.2 and Gemini 3.1 Flash were strongest; gpt-image-2 third; Runway Gen-4 last. Grounds the tool-choice decision.</p>
+        </li>
+        <li>
+          <span class="tag">Method</span>
+          <a href="https://runway.com/resources/create-consistent-ai-characters">How to create consistent AI characters</a>
+          <span class="byline">Runway</span>
+          <p>Reference-driven workflow. The process behind the Week 5 verification run.</p>
+        </li>
+      </ul>
+
+      <h3>Craft</h3>
+      <ul class="source-list">
+        <li>
+          <span class="tag">Article</span>
+          <a href="https://geekchamp.com/how-to-keep-the-same-character-consistent-across-ai-generated-images/">Keep AI-generated characters consistent</a>
+          <span class="byline">Geekchamp</span>
+          <p>Reusable reference, stable identity prompts, version-aware tools, sensible use of seeds.</p>
+        </li>
+        <li>
+          <span class="tag">Article</span>
+          <a href="https://comicbrief.com/blog/consistent-ai-comic-characters">Keeping AI comic characters consistent across panels</a>
+          <span class="byline">Comic Brief</span>
+          <p>Practical techniques for face, clothing and proportions across scenes.</p>
+        </li>
+        <li>
+          <span class="tag">Article</span>
+          <a href="https://leonardo.ai/learn/core-feature/how-to-create-consistent-characters-with-character-reference">Consistent characters with character reference</a>
+          <span class="byline">Leonardo</span>
+          <p>Reference feature walkthrough; useful for what a tool accepts as input.</p>
+        </li>
+        <li>
+          <span class="tag">Docs</span>
+          <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/capabilities/image-generation">Generate images with Gemini</a>
+          <span class="byline">Google Cloud</span>
+          <p>Official capabilities and limits for Gemini image generation.</p>
+        </li>
+      </ul>
+
+      <h3>Mechanism &#8212; why drift happens</h3>
+      <ul class="source-list">
+        <li>
+          <span class="tag">Paper</span>
+          <a href="https://media.milanote.com/p/files/1Xu4XF1wpkXH5r/aFJ/SF0039%20Context%20Representation%20Drift%20%28CRD%29%20v1.3.pdf">Context Representation Drift (CRD) v1.3</a>
+          <span class="byline">PDF, 211 KB</span>
+          <p>Context representation drift as a mechanism, not just an observed symptom.</p>
+        </li>
+        <li>
+          <span class="tag">Paper</span>
+          <a href="https://media.milanote.com/p/files/1Xu4XE1wpkXH5q/zFj/bounded-working-memory.pdf">Bounded working memory</a>
+          <span class="byline">PDF, 46 KB</span>
+          <p>Why long, multi-turn editing sessions degrade instead of improving.</p>
+        </li>
+      </ul>
+
+      <h3>Framing inspiration</h3>
+      <ul class="source-list">
+        <li>
+          <span class="tag">Video</span>
+          <a href="https://www.instagram.com/reel/DeXbHbsNUW-/?xtok=aTMyNHd4eTE3YWR5">Bad Ink Studios &#8212; long scenes, fewer pages</a>
+          <span class="byline">Instagram reel</span>
+          <p>Condensing a long sequence into an omnibus-worth of story without losing the beat.</p>
+        </li>
+      </ul>
+
+      <h3>Working notebooks and raw notes</h3>
+      <ul class="inline-links">
+        <li><a href="https://notebooklm.link.google/CTm7XmxNoQlA">W5 notebook</a></li>
+        <li><a href="https://notebooklm.link.google/fDKyCgVZYvHj">W6 benchmark notebook</a></li>
+        <li><a href="https://notebooklm.link.google/PnXI1bJ5kK3i">W6 comics notebook</a></li>
+        <li><a href="https://notebooklm.link.google/yR5qixxrZrY6">W7 working memory</a></li>
+        <li><a href="https://notebooklm.link.google/8iOj46FTfr0B">W7 hallucinations</a></li>
+        <li><a href="https://notebooklm.link.google/KduTdVKTpFpz">W7 editing degradation</a></li>
+        <li><a href="https://notebooklm.link.google/oeBWAM2QMlL2">W7 multi-turn trap</a></li>
+        <li><a href="docs/milanote/W5%20-%20Runaway%C2%A0Resources-261119_1925.md">W5 note</a></li>
+        <li><a href="docs/milanote/W6%20-%20techstackups%20%26%20Misc-261119_1925.md">W6 note</a></li>
+        <li><a href="docs/milanote/W7%20-%20Working%20Memory%20and%C2%A0Hallucinations-261119_1926.md">W7 note</a></li>
+        <li><a href="docs/milanote/Research%20Map%20%2B%20Information%20Interactions-261119_1925.md">Research map</a></li>
       </ul>
     </section>
 
-    <!-- Project Brief / Weekly Roadmap -->
-    <section aria-labelledby="roadmap-h">
-      <h2 id="roadmap-h">Project Brief / Weekly Roadmap</h2>
-      <p>Weeks 5&#8211;11: goal, activities, tools, output, and success indicator for each week.</p>
+    <!-- 4. Reference images -->
+    <section id="references" aria-labelledby="references-h">
+      <h2 id="references-h">Reference images</h2>
+      <p class="section-intro">
+        Two sheets of the same character. The first sets the tone; the second is the
+        working reference for the comic and the Week 6 test, because it gives the model
+        more angles to hold.
+      </p>
+
+      <div class="gallery">
+        <figure>
+          <img
+            src="205CF5DD-7D40-4CE2-A863-4C50A0814252.png"
+            width="1312" height="1199"
+            alt="Sepia-toned character sheet of a lean man in his twenties with tousled brown hair and stubble, wearing a brown jacket, dark shirt, dark cargo pants and boots. Front and back full-body views, portrait studies, a six-expression grid, action poses, detail close-ups, a brown-to-grey colour swatch strip and a key-traits list including guarded, cynical and observant."
+            loading="lazy" decoding="async" />
+          <figcaption>
+            <span class="tag">Style anchor</span>
+            Mood-board reference. Sepia palette, heavy ink shading, expressive face studies.
+            Not the sheet used for panel generation.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="character-sheet-turnaround.png"
+            width="1536" height="1024"
+            alt="Grey-background character turnaround of the same brown-haired man: five full-body views labelled front, three-quarter front, side, three-quarter back and back, plus head studies, four labelled expressions (neutral, annoyed, surprised, tired), seated and crouching poses, head-detail crops and handwritten design notes listing messy hair, stubble, brown jacket, dark shirt, dark pants with pockets and heavy boots."
+            loading="lazy" decoding="async" />
+          <figcaption>
+            <span class="tag tag--solid">Production turnaround</span>
+            The integral reference: five angles, four expressions, written attributes.
+            This is the asset for the Week 6 rerun.
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="footnote">
+        The rest of the mood board &#8212; cartoon mouse, Gundam, kaiju, a limited-palette
+        noir page, a black-and-white gag strip &#8212; still lives in Milanote as remote
+        cards. Roles and source names are tracked in
+        <a href="docs/milanote/references.md">references.md</a>.
+      </p>
     </section>
 
-    <!-- Prompt Log -->
-    <section aria-labelledby="prompts-h">
-      <h2 id="prompts-h">Prompt Log</h2>
-      <p>Each entry: the prompt used, model / tool, output summary, and what changed afterward.</p>
+    <!-- 5. Notes and experiment log -->
+    <section id="log" aria-labelledby="log-h">
+      <h2 id="log-h">Notes and experiment log</h2>
+
+      <ol class="log">
+        <li>
+          <p class="log-meta"><span class="tag">Test</span> <span class="log-when">Week 5 &#183; date TBC</span></p>
+          <h3>Runway method verification</h3>
+          <p>
+            Ran the article&#8217;s workflow: one character brief repeated five times
+            (tall man, dark red Mohawk, nose tattoo, V guitar on his back, full body),
+            then a pose transfer onto a guitar-playing figure. Screenshots kept with the
+            W5 note.
+          </p>
+          <p class="log-next"><strong>What changed:</strong> confirmed that prompts alone
+            wobble and references are the next rung. Next move: pick genre and cast.</p>
+        </li>
+        <li>
+          <p class="log-meta"><span class="tag">Reading</span> <span class="log-when">Week 6 &#183; date TBC</span></p>
+          <h3>Generator benchmark, and a useful failure</h3>
+          <p>
+            FLUX.2 and Gemini 3.1 Flash led on consistency; gpt-image-2 came third;
+            Runway Gen-4 last. Separately, NotebookLM&#8217;s recreation of the article&#8217;s
+            tattooed subject came back as a woman because the source never specified
+            gender &#8212; the tool filling gaps is the whole drift problem in miniature.
+          </p>
+          <p class="log-next"><strong>Next:</strong> start comic-craft research &#8212; framing,
+            gutters, theming.</p>
+        </li>
+        <li>
+          <p class="log-meta"><span class="tag">Reading</span> <span class="log-when">Week 7 &#183; date TBC</span></p>
+          <h3>Drift has a mechanism</h3>
+          <p>
+            Context Representation Drift and bounded working memory explain why long
+            editing sessions degrade; the notes also collect &#8220;editing degradation&#8221;
+            and the multi-turn degradation trap. Drift is a budget problem, not bad luck.
+          </p>
+        </li>
+        <li>
+          <p class="log-meta"><span class="tag">Decision</span> <span class="log-when"><time datetime="2026-11-19">19 Nov 2026</time></span></p>
+          <h3>Mood board, comic direction, reference inventory</h3>
+          <p>
+            Mood board assembled and annotated: aim for a more detailed style, since a
+            complex image gives the generation more to hold onto. Comic planning opened:
+            cast male or deliberately unreadable; genre modern / sci-fi / western, avoiding
+            medieval; story seeds from <em>Dead as Disco</em>, the Cyberpunk 2077 opener and
+            <em>Jukebox Hero</em>; the Garfield-format 4&#8211;8 panel strip flagged as the
+            likely case-study format. Turnaround sheet downloaded and both sheets
+            catalogued.
+          </p>
+          <p class="log-next"><strong>Next:</strong> run the four-panel Drift Test
+            (neutral, surprised, annoyed, tired) with the turnaround attached.</p>
+        </li>
+      </ol>
     </section>
 
-    <!-- Experiment Log -->
-    <section aria-labelledby="experiments-h">
-      <h2 id="experiments-h">Experiment Log</h2>
-      <p>Each experiment: what you tried, notes, what worked, what failed, and the next step.</p>
+    <!-- 6. Prompt log -->
+    <section id="prompts" aria-labelledby="prompts-h">
+      <h2 id="prompts-h">Prompt log</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Verified prompts only. Scores and outputs are added after each run.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Prompt</th>
+              <th scope="col">Tool</th>
+              <th scope="col">Output</th>
+              <th scope="col">What changed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Make a tall male with dark red hair in a Mohawk. He has a nose tattoo and a V guitar on his back. (Full body shot) &times;5</td>
+              <td>Not recorded</td>
+              <td>Five full-body variations, then a pose transfer onto a guitar-playing figure.</td>
+              <td>Added reference images to the plan as the next rung.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="footnote">
+        No scored Drift Test rows yet &#8212; the four-panel run has not happened. The log
+        stays empty rather than filling in guessed results.
+      </p>
     </section>
 
-    <!-- Links / Workspace Board -->
-    <section aria-labelledby="links-h">
-      <h2 id="links-h">Links / Workspace Board</h2>
-      <ul>
-        <li>Milanote / Notion / Figma board</li>
-        <li>AI tools used</li>
-        <li>Repo / site link</li>
-        <li>Working files (Figma, code, assets)</li>
-      </ul>
+    <!-- 7. Roadmap -->
+    <section id="roadmap" aria-labelledby="roadmap-h">
+      <h2 id="roadmap-h">Roadmap, Weeks 5&#8211;11</h2>
+      <ol class="timeline">
+        <li class="is-next">
+          <p class="week">Week 5 <span class="chip chip--todo">Next up</span></p>
+          <h3>The Drift Test</h3>
+          <p>One prompt, four panels &#8212; neutral, surprised, annoyed, tired &#8212; scored on art style, face and expressions, props and outfit. Output: scored entry plus screenshots.</p>
+        </li>
+        <li>
+          <p class="week">Week 6 <span class="chip chip--later">Planned</span></p>
+          <h3>Reference images rung</h3>
+          <p>Rerun the four panels &#8212; neutral, surprised, annoyed, tired &#8212; with the turnaround attached, respecting each tool&#8217;s reference limit. Output: reference sheet + side-by-side comparison.</p>
+        </li>
+        <li>
+          <p class="week">Week 7 <span class="chip chip--later">Planned</span></p>
+          <h3>Panel templates rung</h3>
+          <p>Test whether layout templates hold composition and framing. Output: template set + scored test.</p>
+        </li>
+        <li>
+          <p class="week">Week 8 <span class="chip chip--later">Planned</span></p>
+          <h3>Character design rung</h3>
+          <p>Revise the design around what drifted most, then rerun. Output: revised character + what AI keeps versus loses.</p>
+        </li>
+        <li>
+          <p class="week">Week 9 <span class="chip chip--later">Planned</span></p>
+          <h3>Sample pages</h3>
+          <p>Make a few pages using only the rungs that earned their place. Success: the character is recognisable on every page.</p>
+        </li>
+        <li>
+          <p class="week">Week 10 <span class="chip chip--later">Planned</span></p>
+          <h3>Playbook assembly</h3>
+          <p>Compile the ladder, prompt templates, reference sheets and &#8220;when you need each&#8221; notes, plus the blooper reel.</p>
+        </li>
+        <li>
+          <p class="week">Week 11 <span class="chip chip--later">Planned</span></p>
+          <h3>Polish and present</h3>
+          <p>Revise on critique, finalise playbook and sample pages.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 8. Open questions and links -->
+    <section id="links" aria-labelledby="links-h">
+      <h2 id="links-h">Open questions and workspace</h2>
+
+      <div class="blocks">
+        <div class="block">
+          <h3>Open questions</h3>
+          <ul class="plain">
+            <li>Do the tools&#8217; reference limits force trimming the turnaround?</li>
+            <li>One tool or two for the showdown? &#8212; pending instructor feedback.</li>
+            <li>What counts as acceptable drift? &#8212; pending instructor feedback.</li>
+            <li>Dialogue: generate text boxes or composite them? Balloons or narration boxes?</li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3>Workspace</h3>
+          <ul class="plain">
+            <li><a href="Chance-261119_1930.md">Project board export</a> &#8212; inquiry brief, roadmap, deliverables</li>
+            <li><a href="Mood%20Board-261119_1936.md">Mood board</a> &#8212; style references</li>
+            <li><a href="To%20Be%20Named%20Comic%C2%A0Planning-261119_1935.md">Comic planning</a> &#8212; genre, cast, story seeds</li>
+            <li><a href="docs/milanote/references.md">Reference inventory</a> &#8212; image roles and sources</li>
+            <li><a href="docs/steps/README.md">Tutorial steps</a> and <a href="docs/addendums/README.md">tool addendums</a></li>
+            <li><a href="https://github.com/">GitHub repository</a> &#8212; replace with your repo URL</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <p>DESN 374 &#183; Command Center &#183; built with the Interview &#8594; Brainstorm &#8594; Plan &#8594; Code &#8594; Commit workflow</p>
+    <p><strong>Keeping AI On-Model</strong> &#183; DESN 374 · every prompt, reference and template logged as it is tested &#183; last updated <time datetime="2026-11-19">19 November 2026</time></p>
   </footer>
 </body>
 </html>
